@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Anton-SC';
+    src: url('./fonts/AntonSC-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'Migra';
+    src: url('./fonts/Migra-Extralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Migra';
+    src: url('./fonts/Migra-Extrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Migra';
+    src: url('./fonts/MigraItalic-ExtralightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Migra';
+    src: url('./fonts/MigraItalic-ExtraboldItalic.otf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in element width */
+}
