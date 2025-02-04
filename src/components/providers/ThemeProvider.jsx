@@ -23,12 +23,23 @@ const Theme = createTheme({
         fontWeight: 800,
         fontStyle: "italic",
     },
+    h1: {
+        fontSize: "4rem",
+    },
     h2: {
         fontSize: "3.2rem",
+    },
+    h3: {
+      fontSize: "2rem",
     },
     body1: {
         fontSize: "1rem",
     },
+    body2: {
+      fontFamily: "sans-serif",
+      fontSize: "1.5rem",
+      fontWeight: 400,
+  },
   },
   components: {
     MuiTypography: {

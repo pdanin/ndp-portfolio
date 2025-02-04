@@ -8,6 +8,7 @@ const CustomButton = ({
   size = "medium", 
   sx = {}, 
   onClick, 
+  disablePressEffect=false,
   ...props 
 }) => {
   return (
@@ -16,6 +17,8 @@ const CustomButton = ({
       variant={variant}
       size={size}
       onClick={onClick}
+      disableRipple={disablePressEffect}
+      disableElevation={disablePressEffect}
       sx={{
         textTransform: "none", 
         border: "1px solid #433D44",

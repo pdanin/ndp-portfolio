@@ -1,4 +1,4 @@
-import { Grid2 as Grid, Typography, ThemeProvider } from '@mui/material';
+import { Grid2 as Grid } from '@mui/material';
 import Logo from '../../assets/logo.png';
 import Image from './Image';
 import CustomButton from './CustomButton';
@@ -9,13 +9,11 @@ export default function HomepageHeader() {
         <Grid container
             sx = {{
                 width: "100%",
-                height: "60px",
                 display: "flex",
                 flexDirection: "row",
                 position: "sticky",
                 top: 0, 
                 zIndex: 1000, 
-                backgroundColor: "#FBFBFB", 
             }}
         >
             <Grid item md={2} xs={2} sx = {{padding: "1.5em 1.5em", boxSizing: "border-box"}}>
@@ -31,10 +29,14 @@ export default function HomepageHeader() {
                     borderRadius: "50px 0 0 50px",
                     padding: "1em 1.5em",
                     gap: "1.5em",
-                    justifyContent: "flex-end"
+                    justifyContent: "flex-end",
+                    background: "#FBFBFB"
                 }}
             >
                 <CustomButton sx={{backgroundColor: "#88FFDB"}}>
+                    featured work
+                </CustomButton>
+                <CustomButton>
                     web development
                 </CustomButton>
                 <CustomButton>
