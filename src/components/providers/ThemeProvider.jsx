@@ -31,6 +31,7 @@ const Theme = createTheme({
     },
     h3: {
       fontSize: "2rem",
+      fontStyle: "italic"
     },
     body1: {
         fontSize: "1rem",

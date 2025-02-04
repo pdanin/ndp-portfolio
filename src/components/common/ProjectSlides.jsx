@@ -26,7 +26,7 @@ const projects = [
         image: B,
         title: "Learnr.sg",
         description: "May - October 2024,\nSoftware Developer Intern and Part-Time",
-        link: ""
+        link: "\learnrsg"
     }, 
     {
         id: "3", 
