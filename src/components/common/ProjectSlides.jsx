@@ -19,28 +19,28 @@ const projects = [
         image: A,
         title: "GoodCause",
         description: "January - May 2024,\nFor EEE DIP, UI/UX and Asset Team",
-        link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+        link: "/web-development"
     }, 
     {
         id: "2", 
         image: B,
         title: "Learnr.sg",
         description: "May - October 2024,\nSoftware Developer Intern and Part-Time",
-        link: "\learnrsg"
+        link: "/web-development"
     }, 
     {
         id: "3", 
         image: C,
         title: "Garage@EEE Events",
         description: "August 2024 - Present,\nBranding and Marketing Member",
-        link: ""
+        link: "/graphic-design/garage"
     }, 
     {
         id: "4", 
         image: D,
         title: "NTU Fencing Invites",
         description: "February - July 2023/24,\nPublicity Committee Member",
-        link: "https://www.youtube.com/watch?v=2ai5NWd8nuo&ab_channel=DrewGooden"
+        link: "/graphic-design/invites"
     }
 ]; 
 
@@ -119,30 +119,22 @@ const ProjSlideshow = () => {
 
             <CustomButton onClick={handlePrev} 
                 disabled={disabled}
+                circular={true}
                 sx = {{ 
                     position: "absolute", 
                     left: "25%", 
                     bottom: "25%",
-                    backgroundColor: "#88FFDB",
-                    border: "2px solid #FBFBFB",
-                    borderRadius: "50em",
-                    color: "#FBFBFB",
-                    padding: "1em"
                 }}
             >
                 <Image src={Left}/>
             </CustomButton>
             <CustomButton onClick={handleNext} 
                 disabled={disabled}
+                circular={true}
                 sx = {{ 
                     position: "absolute", 
                     right: "25%", 
                     bottom: "25%",
-                    backgroundColor: "#88FFDB",
-                    border: "2px solid #FBFBFB",
-                    borderRadius: "50em",
-                    color: "#FBFBFB",
-                    padding: "1em" 
                 }}
             >
                 <Image src={Right}/>
@@ -161,7 +153,6 @@ const ProjSlideshow = () => {
             <CustomButton 
                 sx = {{backgroundColor: "#88FFDB", maxWidth: "10em"}}
                 href={activeProject.link} 
-                target="_blank" 
             >
                 view more
             </CustomButton>

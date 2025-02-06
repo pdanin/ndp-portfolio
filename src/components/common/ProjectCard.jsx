@@ -1,4 +1,4 @@
-import { Grid2 as Grid, Typography } from '@mui/material';
+import { Grid2 as Grid } from '@mui/material';
 import Image from './Image';
 
 const ProjectCard = ({src, className}) => {

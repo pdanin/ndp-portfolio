@@ -6,6 +6,7 @@ const CustomButton = ({
   color = "", 
   variant = "contained", 
   size = "medium", 
+  circular = false,
   sx = {}, 
   onClick, 
   disablePressEffect=false,
@@ -21,9 +22,11 @@ const CustomButton = ({
       disableElevation={disablePressEffect}
       sx={{
         textTransform: "none", 
-        border: "1px solid #433D44",
-        borderRadius: "50px", 
-        padding: "0.5rem 1.5rem", 
+        border: circular ? "2px solid #FBFBFB" : "1px solid #433D44",
+        backgroundColor: circular ? "#88FFDB" : "",
+        borderRadius: "50em", 
+        padding: circular ? "1em" : "0.5rem 1.5rem", 
+        marginBottom: circular ? "0.5em" : "",
         fontWeight: 200, 
         fontSize: "1rem", 
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)", 
