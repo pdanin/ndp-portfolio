@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ndp-portfolio/static/css/main.06657db0.css",
-    "main.js": "/ndp-portfolio/static/js/main.bbe76397.js",
+    "main.js": "/ndp-portfolio/static/js/main.49a97ece.js",
     "static/js/453.d19603ad.chunk.js": "/ndp-portfolio/static/js/453.d19603ad.chunk.js",
     "static/media/garage-hero.png": "/ndp-portfolio/static/media/garage-hero.40e38ee07f94a7e52344.png",
     "static/media/goodcause-hero.png": "/ndp-portfolio/static/media/goodcause-hero.e8ccfc72fdf54176ffde.png",
@@ -49,11 +49,11 @@
     "static/media/innofest.png": "/ndp-portfolio/static/media/innofest.bf4e2e01276fd8c75a82.png",
     "index.html": "/ndp-portfolio/index.html",
     "main.06657db0.css.map": "/ndp-portfolio/static/css/main.06657db0.css.map",
-    "main.bbe76397.js.map": "/ndp-portfolio/static/js/main.bbe76397.js.map",
+    "main.49a97ece.js.map": "/ndp-portfolio/static/js/main.49a97ece.js.map",
     "453.d19603ad.chunk.js.map": "/ndp-portfolio/static/js/453.d19603ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06657db0.css",
-    "static/js/main.bbe76397.js"
+    "static/js/main.49a97ece.js"
   ]
 }
