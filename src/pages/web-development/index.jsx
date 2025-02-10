@@ -46,7 +46,7 @@ export default function WebDevPage() {
                 >
                     <CustomButton
                         circular={true}
-                        onClick={() => window.location.href="/ndp-portfolio/graphic-design/garage"} 
+                        onClick={() => window.location.href="/ndp-portfolio/#/graphic-design/garage"} 
                     >
                         <Image src={Right}/>
                     </CustomButton>
@@ -62,7 +62,7 @@ export default function WebDevPage() {
                 >
                     <CustomButton
                         circular={true}
-                        onClick={() => window.location.href="/ndp-portfolio/graphic-design/invites"} 
+                        onClick={() => window.location.href="/ndp-portfolio/#/graphic-design/invites"} 
                     >
                         <Image src={Left}/>
                     </CustomButton>

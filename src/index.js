@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from './pages/homepage/index.jsx';
 import InvitesPage from './pages/graphic-design/invites/index.jsx';
 import GaragePage from './pages/graphic-design/garage/index.jsx';
@@ -71,10 +71,10 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/ndp-portfolio" element={<Homepage />} />
-          <Route path="/ndp-portfolio/web-development/school-projects" element={<SchoolProjPage />} />
-          <Route path="/ndp-portfolio/web-development/learnr" element={<LearnrPage />} />
-          <Route path="/ndp-portfolio/graphic-design/garage" element={<GaragePage />} />
-          <Route path="/ndp-portfolio/graphic-design/invites" element={<InvitesPage />} />
+          <Route path="/ndp-portfolio/#/web-development/school-projects" element={<SchoolProjPage />} />
+          <Route path="/ndp-portfolio/#/web-development/learnr" element={<LearnrPage />} />
+          <Route path="/ndp-portfolio/#/graphic-design/garage" element={<GaragePage />} />
+          <Route path="/ndp-portfolio/#/graphic-design/invites" element={<InvitesPage />} />
         </Routes>
       </Router>
     </>

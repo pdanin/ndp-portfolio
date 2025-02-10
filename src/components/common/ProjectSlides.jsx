@@ -19,28 +19,28 @@ const projects = [
         image: A,
         title: "GoodCause",
         description: "January - May 2024,\nFor EEE DIP, UI/UX and Asset Team",
-        link: "/ndp-portfolio/web-development/school-projects"
+        link: "/ndp-portfolio/#/web-development/school-projects"
     }, 
     {
         id: "2", 
         image: B,
         title: "Learnr.sg",
         description: "May - October 2024,\nSoftware Developer Intern and Part-Time",
-        link: "/ndp-portfolio/web-development/learnr"
+        link: "/ndp-portfolio/#/web-development/learnr"
     }, 
     {
         id: "3", 
         image: C,
         title: "Garage@EEE Events",
         description: "August 2024 - Present,\nBranding and Marketing Member",
-        link: "/ndp-portfolio/graphic-design/garage"
+        link: "/ndp-portfolio/#/graphic-design/garage"
     }, 
     {
         id: "4", 
         image: D,
         title: "NTU Fencing Invites",
         description: "February - July 2023/24,\nPublicity Committee Member",
-        link: "/ndp-portfolio/graphic-design/invites"
+        link: "/ndp-portfolio/#/graphic-design/invites"
     }
 ]; 
 

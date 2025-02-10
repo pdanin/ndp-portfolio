@@ -12,8 +12,8 @@ export default function HomepageHeader({scrollToFeatured}) {
 
     const pathname = window.location.pathname;
     const isHomePage = pathname.endsWith("/ndp-portfolio/");
-    const isWebDevPage = pathname.includes("/web-development");
-    const isGraphPage = pathname.includes("/graphic-design");
+    const isWebDevPage = pathname.includes("/#/web-development");
+    const isGraphPage = pathname.includes("/#/graphic-design");
 
     const handleClick = () => {
         sessionStorage.setItem("scrollToFeatured", "true"); 
@@ -70,7 +70,7 @@ export default function HomepageHeader({scrollToFeatured}) {
                     {isSmallScreen ? "featured" : "featured work"}
                 </CustomButton>
                 <CustomButton 
-                    onClick={() => window.location.href="/ndp-portfolio/web-development/learnr"}
+                    onClick={() => window.location.href="/ndp-portfolio/#/web-development/learnr"}
                     sx = {{
                         backgroundColor: isWebDevPage ? "#88FFDB" : "#FBFBFB",
                         color: isWebDevPage ? "#868CFF" : "#433D44",
@@ -81,7 +81,7 @@ export default function HomepageHeader({scrollToFeatured}) {
                     {isSmallScreen ? "web dev" : "web development"}
                 </CustomButton>
                 <CustomButton
-                    onClick={() => window.location.href="/ndp-portfolio/graphic-design/garage"}
+                    onClick={() => window.location.href="/ndp-portfolio/#/graphic-design/garage"}
                     sx = {{
                         backgroundColor: isGraphPage ? "#88FFDB" : "#FBFBFB",
                         color: isGraphPage ? "#868CFF" : "#433D44",
