@@ -11,7 +11,7 @@ export default function HomepageHeader({scrollToFeatured}) {
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     const pathname = window.location.pathname;
-    const isHomePage = pathname.endsWith("/ndp-portfolio");
+    const isHomePage = pathname.endsWith("/ndp-portfolio/");
     const isWebDevPage = pathname.includes("/web-development");
     const isGraphPage = pathname.includes("/graphic-design");
 
