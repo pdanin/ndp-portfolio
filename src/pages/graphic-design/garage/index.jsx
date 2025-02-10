@@ -20,6 +20,7 @@ import Cappy from '../../../assets/graphic-design/cappy.png';
 import { InstagramEmbed } from 'react-social-media-embed';
 
 import CustomButton from '../../../components/common/CustomButton';
+import Footer from '../../../components/common/Footer';
 
 export default function GaragePage() {
     const paletteprops = {
@@ -52,11 +53,12 @@ export default function GaragePage() {
                 >
                     <CustomButton 
                         circular={true}
-                        onClick={() => window.location.href="/web-development"}
+                        onClick={() => window.location.href="/ndp-portfolio/web-development/learnr"}
+                        tooltipText='learnr.sg'
                     >
                         <Image src={Left}/>
                     </CustomButton>
-                    <Typography> learnr.sg </Typography>
+                    <Typography sx = {{display: {sm: "block", xs: "none"}}}> learnr.sg </Typography>
                 </Grid>
                 <Grid 
                     sx = {{
@@ -68,11 +70,12 @@ export default function GaragePage() {
                 >
                     <CustomButton 
                         circular={true} 
-                        onClick={() => window.location.href="/graphic-design/invites"}
+                        onClick={() => window.location.href="/ndp-portfolio/graphic-design/invites"}
+                        tooltipText='fencing invites'
                     >
                         <Image src={Right}/>
                     </CustomButton>
-                    <Typography> fencing invites </Typography>
+                    <Typography sx = {{display: {sm: "block", xs: "none"}}}> fencing invites </Typography>
                 </Grid>
                 <Typography variant="h1" sx = {{fontFamily: "Anton-SC, sans-serif", marginTop: "0.5em"}}>
                     Garage@EEE Branding & Marketing (BnM)
@@ -93,21 +96,21 @@ export default function GaragePage() {
                     }}
                 >
                     <Image src={Makerspace} sx = {{width: "100px"}}/>
-                    <Typography variant="body2">
+                    <Typography variant="body2" sx={{minWidth: "360px", width: "50vw"}}>
                         <span style = {{fontWeight: "bold"}}>Role: Main Committee Publicity Head</span><br/><br/>
                         Makerspace Friendlies 2025 is a SUTD x NTU collaborative event, 
-                        <br/> launching an inter-school makerspace competition in Singapore. 
-                        <br/> 
+                        launching an inter-school makerspace competition in Singapore. 
+                        
                         It involves the Micro Mouse competition format.
                     </Typography>
-                    <Grid container sx={{direction: "flex", flexDirection: "row", marginTop: "2em", gap: "1em"}}>
-                        <InstagramEmbed url="https://www.instagram.com/makerspacefriendlies.sg/" width="30vw" />
+                    <Grid container sx={{direction: "flex", flexDirection: "row", marginTop: "2em", gap: "1em", justifyContent: "center"}}>
+                        <InstagramEmbed url="https://www.instagram.com/makerspacefriendlies.sg/" style={{width: "32vw", minWidth: "360px"}} />
                         <Typography variant="body2">
-                            <ul style={{textAlign: "justify", maxWidth: "30vw"}}>
+                            <ul style={{textAlign: "justify", width: "30vw", minWidth: "320px"}}>
                                     <li>Collaborated in designing the logo, poster, and dictated the direction of the event's branding.</li>
                                     <li>Coordinated with team mates in curating exciting, unique cinematics to garner interest.</li>
                             </ul>
-                            <Image src={Iterations} style={{width: "500px"}}/>
+                            <Image src={Iterations} style={{width: "30vw", minWidth: "320px"}}/>
                             <br/> Iterations of Makerspace Friendlies 2025's logo 
                         </Typography>
                     </Grid>
@@ -118,7 +121,8 @@ export default function GaragePage() {
                         gap: "0.5em", 
                         justifyContent: "right", 
                         textAlign: "right",
-                        width: "60vw"
+                        width: {lg: "80%", sm: "100%", xs: "100%"},       
+                        scale: {lg: 1, md: 0.75, xs: 0.75}
                     }}
                 >
                     <Typography variant="h3">
@@ -136,11 +140,11 @@ export default function GaragePage() {
                 <Typography variant="h2" sx = {{fontFamily: "Anton-SC, sans-serif", marginTop: "0.5em"}}>
                     Ideas Jam 2025
                 </Typography>
-                <Image src={Ideasjam} sx = {{width: "300px"}}/>
+                <Image src={Ideasjam} sx = {{width: "250px"}}/>
                 <Typography variant="body2">
                     <span style = {{fontWeight: "bold"}}>Role: BnM Subcommittee, Lanyard Design only</span>
                 </Typography>
-                <Image src={Lanyard} sx = {{width: "600px"}}/>
+                <Image src={Lanyard} sx = {{width: "30vw", minWidth: "360px"}}/>
                 <Typography variant="body2">
                         Night sky, celestial bodies in moodboard, and palette of cool, <br/> 
                         lightning-esque colors. Elements mimic the night sky motif.
@@ -151,7 +155,8 @@ export default function GaragePage() {
                         gap: "0.5em", 
                         justifyContent: "right", 
                         textAlign: "right",
-                        width: "60vw"
+                        width: {lg: "80%", sm: "100%", xs: "100%"},       
+                        scale: {lg: 1, md: 0.75, xs: 0.75}
                     }}
                 >
                     <Typography variant="h3">
@@ -168,28 +173,29 @@ export default function GaragePage() {
                 <Typography variant="h2" sx = {{fontFamily: "Anton-SC, sans-serif", marginTop: "1em"}}>
                     Innovation Festival 2024
                 </Typography>
-                <Image src={Innofest} sx = {{width: "300px"}}/>
+                <Image src={Innofest} sx = {{width: "250px"}}/>
                 <Typography variant="body2">
                     <span style = {{fontWeight: "bold"}}>Role: BnM Subcommittee, Shirt Design only</span>
                 </Typography>
-                <Image src={GrpInnofest} sx = {{width: "600px", marginBottom: "1em"}}/>
-                <Typography variant="body2">
+                <Image src={GrpInnofest} sx = {{width: "30vw", minWidth: "360px", marginBottom: "1em"}}/>
+                <Typography variant="body2" sx={{minWidth: "360px", width: "50vw"}}>
                         Innovation festival (Innofest) is an event showasing robotics projects.
-                        <br/> Slogan for 2024 was "Innovate, Design, Learn" with a J-Culture branding.
+                        Slogan for 2024 was "Innovate, Design, Learn" with a J-Culture branding.
                         <br/> 
                 </Typography>
-                <Grid container sx = {{flexDirection: "row", gap: "2em", marginTop: "2em"}}>
+                <Grid container sx = {{flexDirection: "row", gap: "2em", marginTop: "2em", justifyContent: "center"}}>
                     <Grid container sx = {{flexDirection: "column", gap: "2em", marginTop: "2em", alignItems: "center"}}>
-                        <Image src = {Cappy} sx={{width: "auto", height: "150px"}}/>
-                        <Image src = {GraphicInnofest} sx={{width: "250px", height: "auto"}}/>
+                        <Image src = {Cappy} sx={{width: "auto", height: "20vh", minWidth: "360px"}}/>
+                        <Image src = {GraphicInnofest} sx={{width: "18vw", height: "auto", minWidth: "240px"}}/>
                     </Grid>
-                    <Image src = {ShirtInnofest} sx={{width: "400px", height: "auto"}}/>
+                    <Image src = {ShirtInnofest} sx={{width: "25vw", height: "auto", minWidth: "360px"}}/>
                 </Grid>
-                <Typography variant="body2">
-                    Design is Garage@EEE's Mascot piloting the robot. Energy saving motifs referencing<br/>
+                <Typography variant="body2" sx={{minWidth: "360px", width: "50vw"}}>
+                    Design is Garage@EEE's Mascot piloting the robot. Energy saving motifs referencing
                     Escendo 2024 (featured in event). Robot exterior mirroring mascot’s overall look<br/>
                 </Typography>
             </Grid>
+            <Footer/>
         </ThemeProvider>
     )
 }

@@ -25,21 +25,43 @@ const Theme = createTheme({
     },
     h1: {
         fontSize: "4rem",
+        "@media (max-width: 1000px)": {
+          fontSize: "2.5rem",
+        },
     },
     h2: {
         fontSize: "3.2rem",
+        "@media (max-width: 1000px)": {
+          fontSize: "2.2rem",
+        },
     },
     h3: {
       fontSize: "2rem",
-      fontStyle: "italic"
+      fontStyle: "italic",
+      "@media (max-width: 1000px)": {
+        fontSize: "1.5rem",
+      },
     },
     body1: {
+        fontFamily: "SF-Pro-Display",
         fontSize: "1rem",
     },
     body2: {
-      fontFamily: "sans-serif",
+      fontFamily: "SF-Pro-Display",
       fontSize: "1.5rem",
       fontWeight: 400,
+      "@media (max-width: 1250px)": {
+        fontSize: "1.25rem",
+      },
+      "@media (max-width: 1000px)": {
+        fontSize: "1rem",
+      },
+    },
+    body3: {
+      fontFamily: "SF-Pro-Display",
+      fontSize: "1.25rem",
+      fontWeight: 200,
+      fontStyle: "italic"
   },
   },
   components: {

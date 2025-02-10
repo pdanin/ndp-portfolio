@@ -4,13 +4,13 @@ import { forwardRef, useEffect } from "react";
 import FeaturedHeader from '../../../assets/featured-header.png';
 import ProjSlideshow from '../ProjectSlides';
 
-const FeaturedSection = forwardRef(( ref) => {
+const FeaturedSection = forwardRef((profs, ref) => {
 
 
     return (
         <Grid 
             container 
-            //ref={ref} 
+            ref={ref} 
             id="featured-section"
             sx = {{
                 minHeight: "110vh",
@@ -25,7 +25,7 @@ const FeaturedSection = forwardRef(( ref) => {
         >
             <Image src={FeaturedHeader} sx={{
                 position: "absolute",
-                top: -70,
+                top: {md: "-4vh", xs: "-2vh"}
             }}/>
             <ProjSlideshow/>
         </Grid>

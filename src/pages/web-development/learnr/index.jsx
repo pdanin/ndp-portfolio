@@ -1,21 +1,19 @@
 import React from 'react';
-import Theme from '../../components/providers/ThemeProvider';
+import Theme from '../../../components/providers/ThemeProvider';
 import { Box, Grid2 as Grid, ThemeProvider, Typography } from '@mui/material';
-import HomepageHeader from '../../components/common/Header';
-import Image from '../../components/common/Image';
-import HeadImg from '../../assets/learnr-hero.png';
-import LinkImg from '../../assets/comscreen1.png';
+import HomepageHeader from '../../../components/common/Header';
+import Image from '../../../components/common/Image';
+import HeadImg from '../../../assets/learnr-hero.png';
 import { Link } from 'react-router-dom';
-import Right from '../../assets/right-arrow-button.png';
-import Left from '../../assets/left-arrow-button.png';
-import Logo from '../../assets/logos/learnr.png';
-import mockup from '../../assets/web-dev/ipad-mockup.png';
-import HeadImg2 from '../../assets/goodcause-hero.png';
+import Right from '../../../assets/right-arrow-button.png';
+import Left from '../../../assets/left-arrow-button.png';
+import Logo from '../../../assets/logos/learnr.png';
+import mockup from '../../../assets/web-dev/ipad-mockup.png';
 
-import CustomButton from '../../components/common/CustomButton';
-import Footer from '../../components/common/Footer';
+import CustomButton from '../../../components/common/CustomButton';
+import Footer from '../../../components/common/Footer';
 
-export default function WebDevPage() {
+export default function LearnrPage() {
     const paletteprops = {
         width: "80px", 
         height: "80px", 
@@ -47,10 +45,11 @@ export default function WebDevPage() {
                     <CustomButton
                         circular={true}
                         onClick={() => window.location.href="/ndp-portfolio/graphic-design/garage"} 
+                        tooltipText='garage@EEE'
                     >
                         <Image src={Right}/>
                     </CustomButton>
-                    <Typography> garage@EEE </Typography>
+                    <Typography sx = {{display: {sm: "block", xs: "none"}}}> garage@EEE </Typography>
                 </Grid>
                 <Grid 
                     sx = {{
@@ -62,11 +61,12 @@ export default function WebDevPage() {
                 >
                     <CustomButton
                         circular={true}
-                        onClick={() => window.location.href="/ndp-portfolio/graphic-design/invites"} 
+                        onClick={() => window.location.href="/ndp-portfolio/web-development/school-projects"} 
+                        tooltipText='goodcause'
                     >
                         <Image src={Left}/>
                     </CustomButton>
-                    <Typography> fencing invites </Typography>
+                    <Typography sx = {{display: {sm: "block", xs: "none"}}}> goodcause </Typography>
                 </Grid>
                 <Typography variant="h1" sx = {{fontFamily: "Anton-SC, sans-serif", marginTop: "0.5em"}}>
                     Learnr.sg Pte. Ltd.
@@ -74,14 +74,24 @@ export default function WebDevPage() {
                 <Typography variant="h3">
                     May - October 2024, Software Developer Summer Internship & Part Time
                 </Typography>
-                <Grid container sx={{direction: "flex", flexDirection: "row", width: "100%", justifyContent: "center", marginTop: "1em"}}>
-                    <Grid item md={6} sx = {{position: "relative"}}>
-                        <Image src={HeadImg} sx={{width: "600px", height: "auto"}}/>
-                        <Link to="https://www.learnr.sg/">
-                            <Image src={LinkImg} sx={{width: "220px", height: "auto", position: "absolute", right: "32%", top: "15%", }}/>
-                        </Link>
-                    </Grid>
-                    <Grid item container md={6} sx = {{direction: "flex", flexDirection: "column", alignItems: "center", maxWidth: "40vw"}}>
+                <Grid container 
+                    sx = {{
+                        direction: "flex", 
+                        flexDirection: {
+                            lg: "row", 
+                            md: "column", 
+                            xs: "column"
+                        }, 
+                        width: "100%", 
+                        justifyContent: "center", 
+                        alignItems: "center",
+                        marginTop: "1em"
+                    }}
+                >
+                    <Link to="https://www.learnr.sg/">
+                        <Image src={HeadImg} sx={{width: "40vw",minWidth: "360px", height: "auto"}}/>
+                    </Link>
+                    <Grid item container sx = {{direction: "flex", flexDirection: "column", alignItems: "center", width: {lg: "40vw", md: "55vw", xs: "50vw"}, minWidth: "320px"}}>
                         <Image src={Logo} sx = {{width: "80px"}}/>
                         <Typography variant="body2">
                             <span style = {{fontWeight: "bold"}}>Role: UI/UX Design, Frontend Development</span><br/><br/>
@@ -100,7 +110,9 @@ export default function WebDevPage() {
                         gap: "0.5em", 
                         justifyContent: "right", 
                         textAlign: "right",
-                        width: "80%"
+                        width: "35vw",
+                        minWidth: {md: "500px", xs: "300px"},
+                        scale: {lg: 1, md: 1, xs: 0.75}
                     }}
                 >
                     <Typography variant="h3">
@@ -115,41 +127,38 @@ export default function WebDevPage() {
                     </Grid>
                 </Grid>
                 <Grid container
-                    sx = {{
+                    sx={{
                         background: "linear-gradient(180deg, rgba(68, 255, 233, 0) 0%, rgba(68, 255, 233, 1) 30%, rgba(160, 255, 244, 1) 70%, rgba(160, 255, 244, 0) 100%)",
-                        height: "80vh", 
+                        height: { md: "65vh", xs: "120vh" },
                         width: "100%",
                         marginTop: "2em",
                         justifyContent: "center",
                         alignItems: "center",
-                        position: "relative"
+                        flexDirection: { md: "row", xs: "column" },
+                        gap: {lg: "1em", md: "1em", xs: 0}
                     }}
                 >
-                    <Image src={mockup} sx={{width: "25vw", height: "45vh"}}/>
-                    <Typography variant="body2" sx = {{position: "absolute", left: "10%", width: "25vw"}}>
-                        <span style={{color: "#FFBE00", fontWeight: "bold"}}>Yellow</span> highlights important elements, 
-                        matches mascot and other graphics. Implies warmth and passion.
-                        <br/><br/>
-                        <span style={{color: "#51A9ED", fontWeight: "bold"}}>Blue</span> is a complementary palette with <span style={{color: "#9D9BFF", fontWeight: "bold"}}>purple</span>, it is softer and easier on the eyes.
-                    </Typography>
-                    <Typography variant="body2" sx = {{position: "absolute", right: "10%", width: "25vw"}}>
-                        Simple layouts to ensure optimal user navigation. But more dynamic layouts in the homepage to capture attention.
-                        <br/><br/> 
-                        Exhausted user interaction cases to achieve best experience across web and mobile devices.
-                    </Typography>
-                </Grid>
+                    <Grid item xs={12} md={4} sx={{ display: "flex", justifyContent: "center", textAlign: "center" }}>
+                        <Typography variant="body2" sx={{ width: "25vw", minWidth: "300px" }}>
+                            <span style={{ color: "#FFBE00", fontWeight: "bold" }}>Yellow</span> highlights important elements, 
+                            matches mascot and other graphics. Implies warmth and passion.
+                            <br /><br />
+                            <span style={{ color: "#51A9ED", fontWeight: "bold" }}>Blue</span> is a complementary palette with <span style={{ color: "#9D9BFF", fontWeight: "bold" }}>purple</span>, it is softer and easier on the eyes.
+                        </Typography>
+                    </Grid>
 
-                <Typography variant="h1" sx = {{fontFamily: "Anton-SC, sans-serif", marginTop: "2em"}}>
-                    GoodCause: Heritage and Social Awareness App
-                </Typography>
-                <Typography variant="h3">
-                    January - May 2024, UI/UX Team and Asset Creation 
-                    <br/>
-                    (Made for completion of EEE DIP)
-                </Typography>
-                <Link to="https://ntu-eee-dip-e028.web.app/">
-                    <Image src = {HeadImg2} sx={{width: "600px", height: "auto"}}/>
-                </Link>
+                    <Grid item xs={12} md={4} sx={{ display: "flex", justifyContent: "center" }}>
+                        <Image src={mockup} sx={{ width: {lg: "30vw", md: "100%", xs: "100%"}, maxWidth: {lg: "460px", md: "250px", xs: "300px"}, height: "auto" }} />
+                    </Grid>
+
+                    <Grid item xs={12} md={4} sx={{ display: "flex", justifyContent: "center", textAlign: "center" }}>
+                        <Typography variant="body2" sx={{ width: "25vw", minWidth: "300px" }}>
+                            Simple layouts to ensure optimal user navigation. But more dynamic layouts in the homepage to capture attention.
+                            <br /><br />
+                            Exhausted user interaction cases to achieve the best experience across web and mobile devices.
+                        </Typography>
+                    </Grid>
+                </Grid>
             </Grid>
             <Footer/>
         </ThemeProvider>

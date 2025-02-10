@@ -6,8 +6,8 @@ const SkillsetCard = ({src, Header, Description}) => {
     <Grid container sx = {{direction: "flex", flexDirection: "row", gap: "1.5em"}}>
         <Grid 
             sx = {{
-                width: "100px", 
-                height: "100px", 
+                width: {lg: "100px", md: "80px", xs: "60px"}, 
+                height: {lg: "100px", md: "80px", xs: "60px"}, 
                 justifyContent: "center", 
                 display: "flex", 
                 backgroundColor: "#FBFBFB",

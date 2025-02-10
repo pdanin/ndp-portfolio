@@ -30,7 +30,7 @@ export default function HeroSection() {
                 zIndex: 0
             }}
         >
-            <Grid item position="relative">
+            <Grid item position="relative" sx = {{scale: {lg: 1, md: 0.95, sm: 0.65, xs: 0.5}}}>
                 <Image
                 src={Logo}
                     sx = {{
@@ -39,7 +39,8 @@ export default function HeroSection() {
                         top: "50%",
                         left: "50%",
                         transform: "translate(-50%, -50%)",
-                        width: "40%"
+                        width: "40%",
+                        
                     }}
                 />
                 <Typography variant="hero1" sx = {{zIndex: 5}}>

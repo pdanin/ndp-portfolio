@@ -1,6 +1,6 @@
 import { Grid2 as Grid, Typography } from '@mui/material';
 import Image from '../Image';
-
+import { Link } from 'react-router-dom';
 import AboutHeader from '../../../assets/about-header.png';
 import CustomButton from '../CustomButton';
 import ArrowDown from '../../../assets/arrow-down.png';
@@ -18,21 +18,21 @@ export default function AboutSection() {
         display: "flex", 
         flexDirection: "column",
         flex: 1,
-        alignItems: "center"
+        alignItems: "center",
     };
 
     const columnButton = {
         backgroundColor: "#FBFBFB",
-        fontSize: "2em",
-        color: "#433D44",
-        width: {
-            xl: "30%", 
-            lg: "35%", 
-            md: "50%", 
-            sm: "80%", 
-            xs: "100%"
+        fontSize: {
+            lg: "2em",
+            md: "1.5em",
+            sm: "1.5em",
+            xs: "1.5em"
         },
-        marginBottom: "1em"
+        color: "#433D44",
+        width: "auto",
+        marginBottom: "1em",
+
     };
 
     return (
@@ -45,7 +45,7 @@ export default function AboutSection() {
                 justifyContent: "flex-start",
                 position: "relative",
                 background: "#98FEE0",
-                paddingTop: "4em"
+                paddingTop: "4em",
             }}
         >
             <Grid item
@@ -58,7 +58,7 @@ export default function AboutSection() {
                     minWidth: "12em",
                     minHeight: "4em",
                     top: -45,
-                    right: 100,
+                    right: {md: 100, xs: 50},
                     borderRadius: "1em",
                     gap: "1em",
 
@@ -69,20 +69,23 @@ export default function AboutSection() {
                 </Typography>
                 <Image src={ArrowDown} sx={{width: "28px"}}/>
             </Grid>
-            <Image src={AboutHeader}/>
+            <Grid sx = {{ width: "100%", overflow: "hidden", position: "relative"}}>
+            <Image src={AboutHeader} sx = {{scale: {md: 1, xs: 1.75}, display: "block", objectFit: "cover", 
+               }}/>
+            </Grid>
             <Grid container md={12} xs={12} 
                 sx = {{
                     display: "flex", 
-                    flexDirection: "row",
+                    flexDirection: {md: "row", sm: "column", xs: "column"},
                     gap: "4em",
                     padding: "2em"
                 }}
             >
-                <Grid container item md={6} xs={12} sx = {{...columnProps}}>
+                <Grid container item md={6} sm={12} sx = {{...columnProps, marginBottom: {xs: "-10em", md: "0"}}}>
                     <CustomButton disablePressEffect={true} sx = {{...columnButton}}>
                         Who Am I?
                     </CustomButton>
-                    <Typography variant="body2" sx = {{textAlign: "center", color: "#8A6C77"}}>
+                    <Typography variant="body3" sx = {{textAlign: "center", color: "#8A6C77", maxWidth: "550px"}}>
                     An undergrad in her final year of a bachelor’s degree in Electrical and Electronic Engineering. 
                     Specialises in Web Development with some Machine Learning (ML) and Artificial Intelligence (AI) experience. <br/>
                     <br/>
@@ -93,27 +96,43 @@ export default function AboutSection() {
                         backgroundSize: "contain", 
                         backgroundRepeat: 'no-repeat', 
                         backgroundPosition: "center",
-                        width: "64%",
+                        width: "30vw",
+                        minWidth: {lg: "550px", md: "420px", sm: "500", xs: "400px"},
                         height: "500px",
                         alignItems: "center",
                         justifyContent: "center",
                         display: "flex", 
                         flexDirection: "column",
-                        marginTop: "-3em"
+                        marginTop: {md: "-3em", sm: "-6em", xs: "-6em"},
+                        gap: {lg: "1em", md: 0, xs: 0}
                     }}>
-                        <Typography variant="body2" sx={{paddingTop: "5em",fontSize: "1.75em", color: "#8A6C77"}}>
+                        <Typography variant="body2" sx={{paddingTop: "3em",fontSize: {md: "1.75em", sm: "1.6em", xs: "1.5em"}, color: "#8A6C77", fontStyle: "italic"}}>
                             Phone Number: +65 9642 1575
                             <br/>
                             Email: ninadanin8@gmail.com
                         </Typography>
-                        <Grid item sx = {{display: "flex", flexDirection: "row", gap: "1em", padding: "1em"}}>
+                        <CustomButton 
+                            as="a" 
+                            href="https://www.linkedin.com/in/danielle-ponce-2ba5b0217/" 
+                            sx = {{
+                                backgroundColor: "#433D44", 
+                                color: "#FBFBFB",
+                                display: "flex",
+                                alignItems: "center",
+                                textDecoration: "none",
+                                gap: "0.5em"
+                            }}
+                        >
+                            LinkedIn <Image src={Linkedin} sx={{width: "32px", height: "32px"}}/>
+                        </CustomButton>
+                        {/*<Grid item sx = {{display: "flex", flexDirection: "row", gap: "1em", padding: "1em", marginTop: {lg: "1em",md: "-0.5em"}, scale: {lg: 1.2, md: 1}}}>
                             <Image src={Instagram} sx={{width: "50%", height: "50%"}}/>
                             <Image src={Linkedin} sx={{width: "50%", height: "50%"}}/>
-                        </Grid>
+                        </Grid>*/}
                     </Grid>
                 </Grid>
-                <Grid container item md={6} xs={12} sx = {{...columnProps, gap: "1em", alignItems: "left"}}>
-                    <Typography variant="h2" sx={{borderBottom: "2px solid #433D44", width: "100%"}}>
+                <Grid container item md={6} sm={12} sx = {{...columnProps, gap: "1em", alignItems: "left", marginBottom: "1em", maxWidth: "550px"}}>
+                    <Typography variant="h2" sx={{borderBottom: "2px solid #433D44", width: "100%", fontSize: {md: "3.2em", xs: "2.4em"}}}>
                         Skillsets
                     </Typography>
                     <SkillsetCard 

@@ -19,28 +19,28 @@ const projects = [
         image: A,
         title: "GoodCause",
         description: "January - May 2024,\nFor EEE DIP, UI/UX and Asset Team",
-        link: "/web-development"
+        link: "/ndp-portfolio/web-development/school-projects"
     }, 
     {
         id: "2", 
         image: B,
         title: "Learnr.sg",
         description: "May - October 2024,\nSoftware Developer Intern and Part-Time",
-        link: "/web-development"
+        link: "/ndp-portfolio/web-development/learnr"
     }, 
     {
         id: "3", 
         image: C,
         title: "Garage@EEE Events",
         description: "August 2024 - Present,\nBranding and Marketing Member",
-        link: "/graphic-design/garage"
+        link: "/ndp-portfolio/graphic-design/garage"
     }, 
     {
         id: "4", 
         image: D,
         title: "NTU Fencing Invites",
         description: "February - July 2023/24,\nPublicity Committee Member",
-        link: "/graphic-design/invites"
+        link: "/ndp-portfolio/graphic-design/invites"
     }
 ]; 
 
@@ -67,7 +67,7 @@ const ProjSlideshow = () => {
             flexDirection: "column", 
             justifyContent: "center", 
             alignItems: "center",
-            gap: "2em", 
+            gap: "2em",
             }}>
             <Grid 
                 sx={{
@@ -76,7 +76,10 @@ const ProjSlideshow = () => {
                     justifyContent: "center", 
                     alignItems: "center", 
                     position: "relative", 
-                    width: "100%", 
+                    width: "auto", 
+                    marginTop: {lg: "-2.5em", md: 0, xs: "-25em"},
+                    marginBottom: {md: 0, xs: "-6em"},
+                    scale: {xl: 1, md: 0.70, sm: 0.45, xs: 0.35}
                 }}
             >
                 {projects.map((src, index) => {
@@ -117,32 +120,65 @@ const ProjSlideshow = () => {
                 })}
             </Grid>
 
-            <CustomButton onClick={handlePrev} 
+
+            <Grid 
+                container 
+                sx = {{
+                    flexDirection: "row", 
+                    justifyContent: "center",
+                    width: {xl: "45vw", lg: "55vw", md: "80vw", sm: "80vw", xs: "95vw"}, 
+                    position: "relative"
+                }}
+            >
+                <CustomButton onClick={handlePrev} 
+                    disabled={disabled}
+                    circular={true}
+                    sx = {{ 
+                        position: "absolute",
+                        left: 0,
+                        top: 20
+                    }}
+                >
+                    <Image src={Left}/>
+                </CustomButton>
+
+                <Typography 
+                    variant="h1" 
+                    sx = {{
+                        fontFamily: "Anton-SC, sans-serif", 
+                        textAlign: "center", 
+                        marginTop: "0.5em",
+                        fontSize: {
+                            md: "4rem",
+                            xs: "2.5rem"
+                        }
+                    }}
+                >
+                    {activeProject.title}
+                </Typography>
+
+                <CustomButton onClick={handleNext} 
                 disabled={disabled}
                 circular={true}
                 sx = {{ 
-                    position: "absolute", 
-                    left: "25%", 
-                    bottom: "25%",
+                    position: "absolute",
+                    right: 0,
+                    top: 20
                 }}
-            >
-                <Image src={Left}/>
-            </CustomButton>
-            <CustomButton onClick={handleNext} 
-                disabled={disabled}
-                circular={true}
+                >
+                    <Image src={Right}/>
+                </CustomButton>
+            </Grid>
+            <Typography 
+                variant="h3" 
                 sx = {{ 
-                    position: "absolute", 
-                    right: "25%", 
-                    bottom: "25%",
+                    textAlign: "center",
+                    fontSize: {
+                        md: "2rem",
+                        xs: "1.75rem"
+                    }
                 }}
             >
-                <Image src={Right}/>
-            </CustomButton>
-            <Typography variant="h1" sx = {{fontFamily: "Anton-SC, sans-serif", textAlign: "center", marginTop: "0.5em"}}>
-                {activeProject.title}
-            </Typography>
-            <Typography variant="h3" sx={{ textAlign: "center" }}>
                 {activeProject.description.split("\n").map((line, index) => (
                     <span key={index}>
                         {line}
