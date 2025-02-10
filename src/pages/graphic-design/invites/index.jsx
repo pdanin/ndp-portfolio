@@ -57,7 +57,7 @@ export default function InvitesPage() {
                     }}
                 >
                     <CustomButton 
-                        onClick={() => window.location.href="/ndp-portfolio/#/graphic-design/garage"}
+                        onClick={() => window.location.href="/ndp-portfolio/graphic-design/garage"}
                         circular={true}
                         tooltipText='garage@EEE'
                     >
@@ -74,7 +74,7 @@ export default function InvitesPage() {
                     }}
                 >
                     <CustomButton 
-                        onClick={() => window.location.href="/ndp-portfolio/#/web-development/school-projects"}
+                        onClick={() => window.location.href="/ndp-portfolio/web-development/school-projects"}
                         circular={true}
                         tooltipText='goodcause'
                     >

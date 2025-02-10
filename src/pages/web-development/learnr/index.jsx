@@ -44,7 +44,7 @@ export default function LearnrPage() {
                 >
                     <CustomButton
                         circular={true}
-                        onClick={() => window.location.href="/ndp-portfolio/#/graphic-design/garage"} 
+                        onClick={() => window.location.href="/ndp-portfolio/graphic-design/garage"} 
                         tooltipText='garage@EEE'
                     >
                         <Image src={Right}/>
@@ -61,7 +61,7 @@ export default function LearnrPage() {
                 >
                     <CustomButton
                         circular={true}
-                        onClick={() => window.location.href="/ndp-portfolio/#/web-development/school-projects"} 
+                        onClick={() => window.location.href="/ndp-portfolio/web-development/school-projects"} 
                         tooltipText='goodcause'
                     >
                         <Image src={Left}/>

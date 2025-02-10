@@ -48,7 +48,7 @@ export default function SchoolProjPage() {
                 >
                     <CustomButton
                         circular={true}
-                        onClick={() => window.location.href="/ndp-portfolio/#/web-development/learnr"} 
+                        onClick={() => window.location.href="/ndp-portfolio/web-development/learnr"} 
                         tooltipText='learnr.sg'
                     >
                         <Image src={Right}/>
@@ -65,7 +65,7 @@ export default function SchoolProjPage() {
                 >
                     <CustomButton
                         circular={true}
-                        onClick={() => window.location.href="/ndp-portfolio/#/graphic-design/invites"} 
+                        onClick={() => window.location.href="/ndp-portfolio/graphic-design/invites"} 
                         tooltipText='fencing invites'
                     >
                         <Image src={Left}/>
