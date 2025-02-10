@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from './pages/homepage/index.jsx';
 import InvitesPage from './pages/graphic-design/invites/index.jsx';
 import GaragePage from './pages/graphic-design/garage/index.jsx';
-//import CustomButton from './components/common/CustomButton.jsx';
-//import { Box, Typography } from '@mui/material';
+import CustomButton from './components/common/CustomButton.jsx';
+import { Box, Typography } from '@mui/material';
 import SchoolProjPage from './pages/web-development/school-projects/index.jsx';
 import LearnrPage from './pages/web-development/learnr/index.jsx';
+import ScrollToTop from './components/common/ScrollTop.jsx';
 
 const App = () => {
   const [showWarning, setShowWarning] = useState(window.innerWidth < 600);
@@ -31,7 +32,7 @@ const App = () => {
 
   return (
     <>
-      {/*showWarning && (
+      {showWarning && (
         <Box style={{
           position: "fixed",
           top: 0,
@@ -66,15 +67,17 @@ const App = () => {
             </CustomButton>
           </Box>
         </Box>
-      )*/}
+      )}
 
       <Router>
+        <ScrollToTop/>
         <Routes>
-          <Route path="/ndp-portfolio" element={<Homepage />} />
-          <Route path="/ndp-portfolio/web-development/school-projects" element={<SchoolProjPage />} />
-          <Route path="/ndp-portfolio/web-development/learnr" element={<LearnrPage />} />
-          <Route path="/ndp-portfolio/graphic-design/garage" element={<GaragePage />} />
-          <Route path="/ndp-portfolio/graphic-design/invites" element={<InvitesPage />} />
+          <Route path="/ndp-portfolio/" element={<Homepage />} />
+          <Route path="/web-development/school-projects" element={<SchoolProjPage />} />
+          <Route path="/web-development/learnr" element={<LearnrPage />} />
+          <Route path="/graphic-design/garage" element={<GaragePage />} />
+          <Route path="/graphic-design/invites" element={<InvitesPage />} />
+          <Route path="*" element={<Homepage />} />
         </Routes>
       </Router>
     </>

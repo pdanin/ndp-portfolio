@@ -1,11 +1,10 @@
-import { Grid2 as Grid, Typography } from '@mui/material';
+import { Box, Grid2 as Grid, Typography } from '@mui/material';
+import { useRef } from 'react';
 import Image from '../Image';
-import { Link } from 'react-router-dom';
 import AboutHeader from '../../../assets/about-header.png';
 import CustomButton from '../CustomButton';
 import ArrowDown from '../../../assets/arrow-down.png';
 import ContactBox from '../../../assets/contacts-box.png';
-import Instagram from '../../../assets/Instagram.png';
 import Linkedin from '../../../assets/Linkedin.png';
 import PhpSqlImage from '../../../assets/phpsql.png';
 import AdobeCanvaImage from '../../../assets/aicanva.png';
@@ -13,6 +12,13 @@ import AdobeCanvaImage from '../../../assets/aicanva.png';
 import SkillsetCard from '../SkillCard';
 
 export default function AboutSection() {
+    const aboutRef = useRef(null); 
+
+    const scrollToAbout = () => {
+        if (aboutRef.current) {
+            aboutRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    };
     
     const columnProps = {
         display: "flex", 
@@ -37,6 +43,7 @@ export default function AboutSection() {
 
     return (
         <Grid container 
+            ref={aboutRef}
             sx = {{
                 minHeight: "90vh",
                 display: "flex",
@@ -48,7 +55,9 @@ export default function AboutSection() {
                 paddingTop: "4em",
             }}
         >
-            <Grid item
+            <Box 
+                item
+                onClick={scrollToAbout}
                 sx = {{
                     display: "flex",
                     justifyContent: "center",
@@ -61,14 +70,16 @@ export default function AboutSection() {
                     right: {md: 100, xs: 50},
                     borderRadius: "1em",
                     gap: "1em",
-
+                    cursor: "pointer", // Makes it clickable
+                    transition: "transform 0.2s ease-in-out",
+                    "&:hover": { transform: "scale(1.05)" }
                 }}
             >
                 <Typography variant="h3">
                     about me 
                 </Typography>
                 <Image src={ArrowDown} sx={{width: "28px"}}/>
-            </Grid>
+            </Box>
             <Grid sx = {{ width: "100%", overflow: "hidden", position: "relative"}}>
             <Image src={AboutHeader} sx = {{scale: {md: 1, xs: 1.75}, display: "block", objectFit: "cover", 
                }}/>
@@ -151,15 +162,16 @@ export default function AboutSection() {
                         Description="Informed. Used in NTU Module IE4727: Web Design and Application Project."
                     />
                     <SkillsetCard 
-                        src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
-                        Header="Python"
-                        Description="Informed. Used in various school projects."
-                    />
-                    <SkillsetCard 
                         src={AdobeCanvaImage}
                         Header="Adobe Illustrator, Canva, Paint Tool Sai"
                         Description="Informed. Used in asset and graphic creation for various club events."
                     />
+                    <SkillsetCard 
+                        src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
+                        Header="Python"
+                        Description="Informed. Used in various NTU course projects i.e. EE4483, EE0005"
+                    />
+
                 </Grid>
             </Grid>
         </Grid>

@@ -10,14 +10,14 @@ export default function HomepageHeader({scrollToFeatured}) {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-    const pathname = window.location.pathname;
-    const isHomePage = pathname.endsWith("/ndp-portfolio/");
+    const pathname = window.location.hash;
+    const isHomePage = pathname.endsWith("/ndp-portfolio/#/");
     const isWebDevPage = pathname.includes("/web-development");
     const isGraphPage = pathname.includes("/graphic-design");
 
     const handleClick = () => {
         sessionStorage.setItem("scrollToFeatured", "true"); 
-        window.location.href = "/ndp-portfolio"; 
+        window.location.href = ""; 
       };
 
     return (
@@ -32,7 +32,7 @@ export default function HomepageHeader({scrollToFeatured}) {
             }}
         >
             <Grid item md={2} xs={8} sx = {{padding: "1.5em 1.5em", boxSizing: "border-box"}}>
-                <Link to="/ndp-portfolio">
+                <Link to="/">
                 <Image 
                     src = {Logo} 
                     sx = {{ 
@@ -70,7 +70,7 @@ export default function HomepageHeader({scrollToFeatured}) {
                     {isSmallScreen ? "featured" : "featured work"}
                 </CustomButton>
                 <CustomButton 
-                    onClick={() => window.location.href="/ndp-portfolio/web-development/learnr"}
+                    onClick={() => window.location.href="/ndp-portfolio/#/web-development/learnr"}
                     sx = {{
                         backgroundColor: isWebDevPage ? "#88FFDB" : "#FBFBFB",
                         color: isWebDevPage ? "#868CFF" : "#433D44",
@@ -81,7 +81,7 @@ export default function HomepageHeader({scrollToFeatured}) {
                     {isSmallScreen ? "web dev" : "web development"}
                 </CustomButton>
                 <CustomButton
-                    onClick={() => window.location.href="/ndp-portfolio/graphic-design/garage"}
+                    onClick={() => window.location.href="/ndp-portfolio/#/graphic-design/garage"}
                     sx = {{
                         backgroundColor: isGraphPage ? "#88FFDB" : "#FBFBFB",
                         color: isGraphPage ? "#868CFF" : "#433D44",

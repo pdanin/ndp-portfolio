@@ -2,7 +2,7 @@
   "name": "ndp-portfolio",
   "version": "0.1.0",
   "main": "src/pages/homepage/index.jsx",
-  "homepage": "https://pdanin.github.io/ndp-portfolio",
+  "homepage": "https://pdanin.github.io/ndp-portfolio/#/",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",

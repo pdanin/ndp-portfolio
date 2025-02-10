@@ -12,6 +12,7 @@ import Right from '../../assets/right-arrow-button.png';
 import Left from '../../assets/left-arrow-button.png';
 
 import Image from './Image';
+import { Link } from 'react-router-dom';
 
 const projects = [
     {
@@ -19,28 +20,28 @@ const projects = [
         image: A,
         title: "GoodCause",
         description: "January - May 2024,\nFor EEE DIP, UI/UX and Asset Team",
-        link: "/ndp-portfolio/web-development/school-projects"
+        link: "/web-development/school-projects"
     }, 
     {
         id: "2", 
         image: B,
         title: "Learnr.sg",
         description: "May - October 2024,\nSoftware Developer Intern and Part-Time",
-        link: "/ndp-portfolio/web-development/learnr"
+        link: "/web-development/learnr"
     }, 
     {
         id: "3", 
         image: C,
         title: "Garage@EEE Events",
         description: "August 2024 - Present,\nBranding and Marketing Member",
-        link: "/ndp-portfolio/graphic-design/garage"
+        link: "/graphic-design/garage"
     }, 
     {
         id: "4", 
         image: D,
         title: "NTU Fencing Invites",
         description: "February - July 2023/24,\nPublicity Committee Member",
-        link: "/ndp-portfolio/graphic-design/invites"
+        link: "/graphic-design/invites"
     }
 ]; 
 
@@ -186,13 +187,13 @@ const ProjSlideshow = () => {
                     </span>
                 ))}
             </Typography>
+            <Link to={activeProject.link}>
             <CustomButton 
                 sx = {{backgroundColor: "#88FFDB", maxWidth: "10em"}}
-                href={activeProject.link} 
             >
                 view more
             </CustomButton>
-
+            </Link>
         </Grid>
     );
 };
